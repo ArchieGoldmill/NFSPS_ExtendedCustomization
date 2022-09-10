@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Features">
+      <UniqueIdentifier>{940710bb-7604-4a97-ac1a-3475b84b87f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\ForceLodA">
+      <UniqueIdentifier>{0f79c31f-c319-48cd-a3d3-cc01021aada2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{7e38b992-c578-4700-a0aa-7d98f1f98bc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{f1deb070-0835-4636-bdb0-3c52c557cad9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ForceLodA.cpp">
+      <Filter>Features\ForceLodA</Filter>
+    </ClCompile>
+    <ClCompile Include="Config.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ForceLodA.h">
+      <Filter>Features\ForceLodA</Filter>
+    </ClInclude>
+    <ClInclude Include="Feature.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="GameApi.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

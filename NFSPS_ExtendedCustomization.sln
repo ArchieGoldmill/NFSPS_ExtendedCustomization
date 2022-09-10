@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NFSPS_ExtendedCustomization", "NFSPS_ExtendedCustomization\NFSPS_ExtendedCustomization.vcxproj", "{D68B68BF-D98C-4145-ADF6-BE2D7009599F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D68B68BF-D98C-4145-ADF6-BE2D7009599F}.Debug|x64.ActiveCfg = Debug|x64
+		{D68B68BF-D98C-4145-ADF6-BE2D7009599F}.Debug|x64.Build.0 = Debug|x64
+		{D68B68BF-D98C-4145-ADF6-BE2D7009599F}.Debug|x86.ActiveCfg = Debug|Win32
+		{D68B68BF-D98C-4145-ADF6-BE2D7009599F}.Debug|x86.Build.0 = Debug|Win32
+		{D68B68BF-D98C-4145-ADF6-BE2D7009599F}.Release|x64.ActiveCfg = Release|x64
+		{D68B68BF-D98C-4145-ADF6-BE2D7009599F}.Release|x64.Build.0 = Release|x64
+		{D68B68BF-D98C-4145-ADF6-BE2D7009599F}.Release|x86.ActiveCfg = Release|Win32
+		{D68B68BF-D98C-4145-ADF6-BE2D7009599F}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C835CFB-3574-479A-9C94-4B1B7A959B15}
+	EndGlobalSection
+EndGlobal
