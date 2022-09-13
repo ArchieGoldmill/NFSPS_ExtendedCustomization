@@ -14,6 +14,7 @@ namespace Config
 	{
 	public:
 		float FrontSteerAngle;
+		bool ExpandMemoryPools;
 	};
 
 	class _Car : public _Common
