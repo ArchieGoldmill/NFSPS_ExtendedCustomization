@@ -12,7 +12,8 @@ namespace Config
 
 	class _Global : public _Common
 	{
-
+	public:
+		float FrontSteerAngle;
 	};
 
 	class _Car : public _Common

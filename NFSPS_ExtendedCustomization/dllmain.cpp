@@ -7,6 +7,8 @@ void Init()
 {
 	Config::Init();
 
+	*Game::FrontSteerAngle = Config::Global.FrontSteerAngle;
+
 	InitForceLodA();
 }
 

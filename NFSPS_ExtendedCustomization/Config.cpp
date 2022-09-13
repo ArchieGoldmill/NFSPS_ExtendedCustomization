@@ -59,6 +59,8 @@ namespace Config
 	{
 		CIniReader iniReader("NFSPSExtendedCustomization.ini");
 		InitCommon(&Global, iniReader);
+		Global.FrontSteerAngle = iniReader.ReadFloat("GENERAL", "FrontSteerAngle", 340);
+
 		InitCars();
 	}
 }
