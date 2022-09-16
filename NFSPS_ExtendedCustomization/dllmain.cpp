@@ -38,11 +38,13 @@ BOOL APIENTRY DllMain(HMODULE /*hModule*/, DWORD reason, LPVOID /*lpReserved*/)
 		uintptr_t base = (uintptr_t)GetModuleHandleA(NULL);
 
 		if (strstr((const char*)(base + (0xA49742 - base)), "ProStreet08Release.exe"))
+		{
 			Init();
+		}
 
 		else
 		{
-			MessageBoxA(NULL, "This .exe is not supported.\nPlease use a NOCD v1.1 NFS.exe.", "NFSPS Extra Options", MB_ICONERROR);
+			MessageBoxA(NULL, "This .exe is not supported.\nPlease use a NOCD v1.1 NFS.exe.", "NFSPS Extended Customization", MB_ICONERROR);
 			return FALSE;
 		}
 	}
