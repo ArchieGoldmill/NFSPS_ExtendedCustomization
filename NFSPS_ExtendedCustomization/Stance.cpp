@@ -14,7 +14,7 @@ float __stdcall GetTrackWidth(int** carRenderInfo, int wheel, int original)
 			float* ptr = (float*)Game::DBCarPart_GetAppliedAttributeIParam(part, wheel < 2 ? FRONT_TIRE_OFFSET : REAR_TIRE_OFFSET, 0);
 			if (ptr)
 			{
-				result = *(ptr + 1);
+				result = ptr[1];
 			}
 		}
 	}

@@ -76,7 +76,7 @@
     <TargetExt>.asi</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>D:\Games\Need for Speed - ProStreet\scripts\</OutDir>
+    <OutDir>..\mod\Install\scripts\</OutDir>
     <TargetName>NFSPSExtendedCustomization</TargetName>
     <TargetExt>.asi</TargetExt>
   </PropertyGroup>
