@@ -157,12 +157,14 @@
     <ClCompile Include="Config.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="ForceLodA.cpp" />
+    <ClCompile Include="Stance.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Config.h" />
     <ClInclude Include="Feature.h" />
     <ClInclude Include="ForceLodA.h" />
     <ClInclude Include="GameApi.h" />
+    <ClInclude Include="Stance.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

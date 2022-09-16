@@ -2,25 +2,33 @@
 
 #include "Feature.h"
 #include "ForceLodA.h"
+#include "Stance.h"
 
 void Init()
 {
 	Config::Init();
 
 	*Game::FrontSteerAngle = Config::Global.FrontSteerAngle;
-	
+
 	if (Config::Global.ExpandMemoryPools)
 	{
-		injector::WriteMemory<int>(0x0065F761, 0x2C8000, true); // GManager::GetVaultAllocator
-		injector::WriteMemory<int>(0x0065F781, 0x2C8000, true); // 
+		injector::WriteMemory<int>(0x0065F761, 0x164000 * 2, true); // GManager::GetVaultAllocator
+		injector::WriteMemory<int>(0x0065F781, 0x164000 * 2, true); // 
 
-		injector::WriteMemory<DWORD>(0x00A58F9C, 0x0BE6E0, true); // CarLoaderPoolSizes
-		injector::WriteMemory<DWORD>(0x00A60DE4, 0x01CC00, true); // FEngMemoryPoolSize 
+		injector::WriteMemory<DWORD>(0x00A58F9C, 0x0BB800 * 2, true); // FEngMemoryPoolSize
+		injector::WriteMemory<DWORD>(0x00A60DE4, 0x13880 * 2, true); // CarLoaderPoolSizes
+	}
 
-		injector::WriteMemory<DWORD>(0x00453016, 0x7D000, true); // ePolySlotPool
+	if (Config::Global.InfiniteTuningSliders)
+	{
+		injector::MakeNOP(0x005C192C, 8, true);
+		injector::MakeNOP(0x005C18DC, 2, true);
+		injector::MakeNOP(0x005C185A, 2, true);
+		injector::MakeJMP(0x005C18E6, 0x005C19AC, true);
 	}
 
 	InitForceLodA();
+	InitStance();
 }
 
 BOOL APIENTRY DllMain(HMODULE /*hModule*/, DWORD reason, LPVOID /*lpReserved*/)

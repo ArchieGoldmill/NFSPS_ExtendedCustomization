@@ -17,6 +17,9 @@
     <Filter Include="Config">
       <UniqueIdentifier>{f1deb070-0835-4636-bdb0-3c52c557cad9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Features\Stance">
+      <UniqueIdentifier>{4152e853-f428-49fb-a039-98cac58379cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -27,6 +30,9 @@
     </ClCompile>
     <ClCompile Include="Config.cpp">
       <Filter>Config</Filter>
+    </ClCompile>
+    <ClCompile Include="Stance.cpp">
+      <Filter>Features\Stance</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -41,6 +47,9 @@
     </ClInclude>
     <ClInclude Include="Config.h">
       <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="Stance.h">
+      <Filter>Features\Stance</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
