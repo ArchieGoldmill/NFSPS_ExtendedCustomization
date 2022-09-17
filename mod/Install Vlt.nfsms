@@ -1,0 +1,533 @@
+game PS
+
+// Make spoilers available in any mode
+update_field part_fedata generic_spoiler_evo partData[0] 4 16843008
+update_field part_fedata generic_spoiler_drag partData[0] 4 16843008
+
+// Add more spoilers
+copy_node car_part generic_spoiler_evo generic_spoiler_evo2
+	update_field car_part generic_spoiler_evo2 name SPOILER_EVO2
+	update_field car_part generic_spoiler_evo2 fe_data Collection generic_spoiler_evo2
+	update_field car_part generic_spoiler_evo2 art Collection generic_spoiler_evo2
+copy_node part_fedata generic_spoiler_evo generic_spoiler_evo2
+	update_field part_fedata generic_spoiler_evo2 partData[0] HAL_ID 0xC2F6E986
+copy_node part_art generic_spoiler_evo generic_spoiler_evo2
+	update_field part_art generic_spoiler_evo2 models SPOILER_EVO2
+	
+copy_node car_part generic_spoiler_evo generic_spoiler_evo3
+	update_field car_part generic_spoiler_evo3 name SPOILER_EVO3
+	update_field car_part generic_spoiler_evo3 fe_data Collection generic_spoiler_evo3
+	update_field car_part generic_spoiler_evo3 art Collection generic_spoiler_evo3
+copy_node part_fedata generic_spoiler_evo generic_spoiler_evo3
+	update_field part_fedata generic_spoiler_evo3 partData[0] HAL_ID 0xC2F6E99E
+copy_node part_art generic_spoiler_evo generic_spoiler_evo3
+	update_field part_art generic_spoiler_evo3 models SPOILER_EVO3
+	
+copy_node car_part generic_spoiler_evo generic_spoiler_evo4
+	update_field car_part generic_spoiler_evo4 name SPOILER_EVO4
+	update_field car_part generic_spoiler_evo4 fe_data Collection generic_spoiler_evo4
+	update_field car_part generic_spoiler_evo4 art Collection generic_spoiler_evo4
+copy_node part_fedata generic_spoiler_evo generic_spoiler_evo4
+	update_field part_fedata generic_spoiler_evo4 partData[0] HAL_ID 0xC2F6E99F
+copy_node part_art generic_spoiler_evo generic_spoiler_evo4
+	update_field part_art generic_spoiler_evo4 models SPOILER_EVO4
+	
+copy_node car_part generic_spoiler_evo generic_spoiler_evo5
+	update_field car_part generic_spoiler_evo5 name SPOILER_EVO5
+	update_field car_part generic_spoiler_evo5 fe_data Collection generic_spoiler_evo5
+	update_field car_part generic_spoiler_evo5 art Collection generic_spoiler_evo5
+copy_node part_fedata generic_spoiler_evo generic_spoiler_evo5
+	update_field part_fedata generic_spoiler_evo5 partData[0] HAL_ID 0xC2F6E9A0
+copy_node part_art generic_spoiler_evo generic_spoiler_evo5
+	update_field part_art generic_spoiler_evo5 models SPOILER_EVO5
+	
+copy_node car_part generic_spoiler_drag generic_spoiler_drag2
+	update_field car_part generic_spoiler_drag2 name SPOILER_DRAG2
+	update_field car_part generic_spoiler_drag2 fe_data Collection generic_spoiler_drag2
+	update_field car_part generic_spoiler_drag2 art Collection generic_spoiler_drag2
+copy_node part_fedata generic_spoiler_drag generic_spoiler_drag2
+	update_field part_fedata generic_spoiler_drag2 partData[0] HAL_ID 0xc2f6e982
+copy_node part_art generic_spoiler_drag generic_spoiler_drag2
+	update_field part_art generic_spoiler_drag2 models SPOILER_DRAG2
+	
+copy_node car_part generic_spoiler_drag generic_spoiler_drag3
+	update_field car_part generic_spoiler_drag3 name SPOILER_DRAG3
+	update_field car_part generic_spoiler_drag3 fe_data Collection generic_spoiler_drag3
+	update_field car_part generic_spoiler_drag3 art Collection generic_spoiler_drag3
+copy_node part_fedata generic_spoiler_drag generic_spoiler_drag3
+	update_field part_fedata generic_spoiler_drag3 partData[0] HAL_ID 0xC2F6E983
+copy_node part_art generic_spoiler_drag generic_spoiler_drag3
+	update_field part_art generic_spoiler_drag3 models SPOILER_DRAG3
+	
+copy_node car_part generic_spoiler_drag generic_spoiler_drag4
+	update_field car_part generic_spoiler_drag4 name SPOILER_DRAG4
+	update_field car_part generic_spoiler_drag4 fe_data Collection generic_spoiler_drag4
+	update_field car_part generic_spoiler_drag4 art Collection generic_spoiler_drag4
+copy_node part_fedata generic_spoiler_drag generic_spoiler_drag4
+	update_field part_fedata generic_spoiler_drag4 partData[0] HAL_ID 0xC2F6E984
+copy_node part_art generic_spoiler_drag generic_spoiler_drag4
+	update_field part_art generic_spoiler_drag4 models SPOILER_DRAG4
+	
+copy_node car_part generic_spoiler_drag generic_spoiler_drag5
+	update_field car_part generic_spoiler_drag5 name SPOILER_DRAG5
+	update_field car_part generic_spoiler_drag5 fe_data Collection generic_spoiler_drag5
+	update_field car_part generic_spoiler_drag5 art Collection generic_spoiler_drag5
+copy_node part_fedata generic_spoiler_drag generic_spoiler_drag5
+	update_field part_fedata generic_spoiler_drag5 partData[0] HAL_ID 0xC2F6E985
+copy_node part_art generic_spoiler_drag generic_spoiler_drag5
+	update_field part_art generic_spoiler_drag5 models SPOILER_DRAG5
+
+// Allow more bodykits in FE
+delete_node part_fedata generic_body_as
+copy_node part_fedata generic_exhaust generic_body_as
+
+update_field part_fedata generic_body_as partData[0] HAL_ID 0xfd9d1cc1
+update_field part_fedata generic_body_as partData[0] CF_HAL_ID 0xdac3d6ae
+update_field part_fedata generic_body_as partData[0] 7 0x7f0ba498
+resize_collection part_fedata generic_body_as partData[0] 9 4
+update_collection part_fedata generic_body_as partData[0] 9 0 Value body_front_slider_1
+update_collection part_fedata generic_body_as partData[0] 9 1 Value body_front_slider_2
+update_collection part_fedata generic_body_as partData[0] 9 2 Value body_front_slider_3
+update_collection part_fedata generic_body_as partData[0] 9 3 Value body_front_slider_4
+resize_collection part_fedata generic_body_as partData[0] 10 4
+update_collection part_fedata generic_body_as partData[0] 10 0 Value body_rear_slider_1
+update_collection part_fedata generic_body_as partData[0] 10 1 Value body_rear_slider_2
+update_collection part_fedata generic_body_as partData[0] 10 2 Value body_rear_slider_3
+update_collection part_fedata generic_body_as partData[0] 10 3 Value body_rear_slider_4
+resize_collection part_fedata generic_body_as partData[0] 11 3
+update_collection part_fedata generic_body_as partData[0] 11 0 Value body_skirt_slider_1
+update_collection part_fedata generic_body_as partData[0] 11 1 Value body_skirt_slider_2
+update_collection part_fedata generic_body_as partData[0] 11 2 Value body_skirt_slider_3
+
+update_field part_fedata generic_body_as partData[1] HAL_ID 0x33e52d05
+update_field part_fedata generic_body_as partData[1] Price 4000
+update_field part_fedata generic_body_as partData[1] 7 0x56db0b22
+resize_collection part_fedata generic_body_as partData[1] 9 4
+update_collection part_fedata generic_body_as partData[1] 9 0 Value body_front_slider_1
+update_collection part_fedata generic_body_as partData[1] 9 1 Value body_front_slider_2
+update_collection part_fedata generic_body_as partData[1] 9 2 Value body_front_slider_3
+update_collection part_fedata generic_body_as partData[1] 9 3 Value body_front_slider_4
+resize_collection part_fedata generic_body_as partData[1] 10 4
+update_collection part_fedata generic_body_as partData[1] 10 0 Value body_rear_slider_1
+update_collection part_fedata generic_body_as partData[1] 10 1 Value body_rear_slider_2
+update_collection part_fedata generic_body_as partData[1] 10 2 Value body_rear_slider_3
+update_collection part_fedata generic_body_as partData[1] 10 3 Value body_rear_slider_4
+resize_collection part_fedata generic_body_as partData[1] 11 3
+update_collection part_fedata generic_body_as partData[1] 11 0 Value body_skirt_slider_1
+update_collection part_fedata generic_body_as partData[1] 11 1 Value body_skirt_slider_2
+update_collection part_fedata generic_body_as partData[1] 11 2 Value body_skirt_slider_3
+
+update_field part_fedata generic_body_as partData[2] HAL_ID 0x33e52d06
+update_field part_fedata generic_body_as partData[2] Price 6500
+update_field part_fedata generic_body_as partData[2] 7 0x56db0b22
+resize_collection part_fedata generic_body_as partData[2] 9 4
+update_collection part_fedata generic_body_as partData[2] 9 0 Value body_front_slider_1
+update_collection part_fedata generic_body_as partData[2] 9 1 Value body_front_slider_2
+update_collection part_fedata generic_body_as partData[2] 9 2 Value body_front_slider_3
+update_collection part_fedata generic_body_as partData[2] 9 3 Value body_front_slider_4
+resize_collection part_fedata generic_body_as partData[2] 10 4
+update_collection part_fedata generic_body_as partData[2] 10 0 Value body_rear_slider_1
+update_collection part_fedata generic_body_as partData[2] 10 1 Value body_rear_slider_2
+update_collection part_fedata generic_body_as partData[2] 10 2 Value body_rear_slider_3
+update_collection part_fedata generic_body_as partData[2] 10 3 Value body_rear_slider_4
+resize_collection part_fedata generic_body_as partData[2] 11 3
+update_collection part_fedata generic_body_as partData[2] 11 0 Value body_skirt_slider_1
+update_collection part_fedata generic_body_as partData[2] 11 1 Value body_skirt_slider_2
+update_collection part_fedata generic_body_as partData[2] 11 2 Value body_skirt_slider_3
+
+update_field part_fedata generic_body_as partData[3] HAL_ID 0x33e52d07
+update_field part_fedata generic_body_as partData[3] Price 9000
+update_field part_fedata generic_body_as partData[3] 7 0x56db0b22
+resize_collection part_fedata generic_body_as partData[3] 9 4
+update_collection part_fedata generic_body_as partData[3] 9 0 Value body_front_slider_1
+update_collection part_fedata generic_body_as partData[3] 9 1 Value body_front_slider_2
+update_collection part_fedata generic_body_as partData[3] 9 2 Value body_front_slider_3
+update_collection part_fedata generic_body_as partData[3] 9 3 Value body_front_slider_4
+resize_collection part_fedata generic_body_as partData[3] 10 4
+update_collection part_fedata generic_body_as partData[3] 10 0 Value body_rear_slider_1
+update_collection part_fedata generic_body_as partData[3] 10 1 Value body_rear_slider_2
+update_collection part_fedata generic_body_as partData[3] 10 2 Value body_rear_slider_3
+update_collection part_fedata generic_body_as partData[3] 10 3 Value body_rear_slider_4
+resize_collection part_fedata generic_body_as partData[3] 11 3
+update_collection part_fedata generic_body_as partData[3] 11 0 Value body_skirt_slider_1
+update_collection part_fedata generic_body_as partData[3] 11 1 Value body_skirt_slider_2
+update_collection part_fedata generic_body_as partData[3] 11 2 Value body_skirt_slider_3
+
+update_field part_fedata generic_body_as partData[4] HAL_ID 0x33e52d09
+update_field part_fedata generic_body_as partData[4] Price 9000
+update_field part_fedata generic_body_as partData[4] 7 0x56db0b22
+resize_collection part_fedata generic_body_as partData[4] 9 4
+update_collection part_fedata generic_body_as partData[4] 9 0 Value body_front_slider_1
+update_collection part_fedata generic_body_as partData[4] 9 1 Value body_front_slider_2
+update_collection part_fedata generic_body_as partData[4] 9 2 Value body_front_slider_3
+update_collection part_fedata generic_body_as partData[4] 9 3 Value body_front_slider_4
+resize_collection part_fedata generic_body_as partData[4] 10 4
+update_collection part_fedata generic_body_as partData[4] 10 0 Value body_rear_slider_1
+update_collection part_fedata generic_body_as partData[4] 10 1 Value body_rear_slider_2
+update_collection part_fedata generic_body_as partData[4] 10 2 Value body_rear_slider_3
+update_collection part_fedata generic_body_as partData[4] 10 3 Value body_rear_slider_4
+resize_collection part_fedata generic_body_as partData[4] 11 3
+update_collection part_fedata generic_body_as partData[4] 11 0 Value body_skirt_slider_1
+update_collection part_fedata generic_body_as partData[4] 11 1 Value body_skirt_slider_2
+update_collection part_fedata generic_body_as partData[4] 11 2 Value body_skirt_slider_3
+
+update_field part_fedata generic_body_as partData[5] HAL_ID 0x33e52d0a
+update_field part_fedata generic_body_as partData[5] Price 9000
+update_field part_fedata generic_body_as partData[5] 7 0x56db0b22
+resize_collection part_fedata generic_body_as partData[5] 9 4
+update_collection part_fedata generic_body_as partData[5] 9 0 Value body_front_slider_1
+update_collection part_fedata generic_body_as partData[5] 9 1 Value body_front_slider_2
+update_collection part_fedata generic_body_as partData[5] 9 2 Value body_front_slider_3
+update_collection part_fedata generic_body_as partData[5] 9 3 Value body_front_slider_4
+resize_collection part_fedata generic_body_as partData[5] 10 4
+update_collection part_fedata generic_body_as partData[5] 10 0 Value body_rear_slider_1
+update_collection part_fedata generic_body_as partData[5] 10 1 Value body_rear_slider_2
+update_collection part_fedata generic_body_as partData[5] 10 2 Value body_rear_slider_3
+update_collection part_fedata generic_body_as partData[5] 10 3 Value body_rear_slider_4
+resize_collection part_fedata generic_body_as partData[5] 11 3
+update_collection part_fedata generic_body_as partData[5] 11 0 Value body_skirt_slider_1
+update_collection part_fedata generic_body_as partData[5] 11 1 Value body_skirt_slider_2
+update_collection part_fedata generic_body_as partData[5] 11 2 Value body_skirt_slider_3
+
+update_field part_fedata generic_body_as partData[6] HAL_ID 0x33e52d0b
+update_field part_fedata generic_body_as partData[6] Price 9000
+update_field part_fedata generic_body_as partData[6] 7 0x56db0b22
+resize_collection part_fedata generic_body_as partData[6] 9 4
+update_collection part_fedata generic_body_as partData[6] 9 0 Value body_front_slider_1
+update_collection part_fedata generic_body_as partData[6] 9 1 Value body_front_slider_2
+update_collection part_fedata generic_body_as partData[6] 9 2 Value body_front_slider_3
+update_collection part_fedata generic_body_as partData[6] 9 3 Value body_front_slider_4
+resize_collection part_fedata generic_body_as partData[6] 10 4
+update_collection part_fedata generic_body_as partData[6] 10 0 Value body_rear_slider_1
+update_collection part_fedata generic_body_as partData[6] 10 1 Value body_rear_slider_2
+update_collection part_fedata generic_body_as partData[6] 10 2 Value body_rear_slider_3
+update_collection part_fedata generic_body_as partData[6] 10 3 Value body_rear_slider_4
+resize_collection part_fedata generic_body_as partData[6] 11 3
+update_collection part_fedata generic_body_as partData[6] 11 0 Value body_skirt_slider_1
+update_collection part_fedata generic_body_as partData[6] 11 1 Value body_skirt_slider_2
+update_collection part_fedata generic_body_as partData[6] 11 2 Value body_skirt_slider_3
+
+update_field part_fedata generic_body_as partData[7] HAL_ID 0x33e52d0c
+update_field part_fedata generic_body_as partData[7] Price 9000
+update_field part_fedata generic_body_as partData[7] 7 0x56db0b22
+resize_collection part_fedata generic_body_as partData[7] 9 4
+update_collection part_fedata generic_body_as partData[7] 9 0 Value body_front_slider_1
+update_collection part_fedata generic_body_as partData[7] 9 1 Value body_front_slider_2
+update_collection part_fedata generic_body_as partData[7] 9 2 Value body_front_slider_3
+update_collection part_fedata generic_body_as partData[7] 9 3 Value body_front_slider_4
+resize_collection part_fedata generic_body_as partData[7] 10 4
+update_collection part_fedata generic_body_as partData[7] 10 0 Value body_rear_slider_1
+update_collection part_fedata generic_body_as partData[7] 10 1 Value body_rear_slider_2
+update_collection part_fedata generic_body_as partData[7] 10 2 Value body_rear_slider_3
+update_collection part_fedata generic_body_as partData[7] 10 3 Value body_rear_slider_4
+resize_collection part_fedata generic_body_as partData[7] 11 3
+update_collection part_fedata generic_body_as partData[7] 11 0 Value body_skirt_slider_1
+update_collection part_fedata generic_body_as partData[7] 11 1 Value body_skirt_slider_2
+update_collection part_fedata generic_body_as partData[7] 11 2 Value body_skirt_slider_3
+
+update_field part_fedata generic_body_as partData[8] HAL_ID 0x33e52d0d
+update_field part_fedata generic_body_as partData[8] Price 9000
+update_field part_fedata generic_body_as partData[8] 7 0x56db0b22
+resize_collection part_fedata generic_body_as partData[8] 9 4
+update_collection part_fedata generic_body_as partData[8] 9 0 Value body_front_slider_1
+update_collection part_fedata generic_body_as partData[8] 9 1 Value body_front_slider_2
+update_collection part_fedata generic_body_as partData[8] 9 2 Value body_front_slider_3
+update_collection part_fedata generic_body_as partData[8] 9 3 Value body_front_slider_4
+resize_collection part_fedata generic_body_as partData[8] 10 4
+update_collection part_fedata generic_body_as partData[8] 10 0 Value body_rear_slider_1
+update_collection part_fedata generic_body_as partData[8] 10 1 Value body_rear_slider_2
+update_collection part_fedata generic_body_as partData[8] 10 2 Value body_rear_slider_3
+update_collection part_fedata generic_body_as partData[8] 10 3 Value body_rear_slider_4
+resize_collection part_fedata generic_body_as partData[8] 11 3
+update_collection part_fedata generic_body_as partData[8] 11 0 Value body_skirt_slider_1
+update_collection part_fedata generic_body_as partData[8] 11 1 Value body_skirt_slider_2
+update_collection part_fedata generic_body_as partData[8] 11 2 Value body_skirt_slider_3
+
+update_field part_fedata generic_body_as partData[9] HAL_ID 0xB08ACDD5
+update_field part_fedata generic_body_as partData[9] Price 9000
+update_field part_fedata generic_body_as partData[9] 7 0x56db0b22
+resize_collection part_fedata generic_body_as partData[9] 9 4
+update_collection part_fedata generic_body_as partData[9] 9 0 Value body_front_slider_1
+update_collection part_fedata generic_body_as partData[9] 9 1 Value body_front_slider_2
+update_collection part_fedata generic_body_as partData[9] 9 2 Value body_front_slider_3
+update_collection part_fedata generic_body_as partData[9] 9 3 Value body_front_slider_4
+resize_collection part_fedata generic_body_as partData[9] 10 4
+update_collection part_fedata generic_body_as partData[9] 10 0 Value body_rear_slider_1
+update_collection part_fedata generic_body_as partData[9] 10 1 Value body_rear_slider_2
+update_collection part_fedata generic_body_as partData[9] 10 2 Value body_rear_slider_3
+update_collection part_fedata generic_body_as partData[9] 10 3 Value body_rear_slider_4
+resize_collection part_fedata generic_body_as partData[9] 11 3
+update_collection part_fedata generic_body_as partData[9] 11 0 Value body_skirt_slider_1
+update_collection part_fedata generic_body_as partData[9] 11 1 Value body_skirt_slider_2
+update_collection part_fedata generic_body_as partData[9] 11 2 Value body_skirt_slider_3
+
+update_field part_fedata generic_body_as partData[10] HAL_ID 0xB08ACDD6
+update_field part_fedata generic_body_as partData[10] Price 9000
+update_field part_fedata generic_body_as partData[10] 7 0x56db0b22
+resize_collection part_fedata generic_body_as partData[10] 9 4
+update_collection part_fedata generic_body_as partData[10] 9 0 Value body_front_slider_1
+update_collection part_fedata generic_body_as partData[10] 9 1 Value body_front_slider_2
+update_collection part_fedata generic_body_as partData[10] 9 2 Value body_front_slider_3
+update_collection part_fedata generic_body_as partData[10] 9 3 Value body_front_slider_4
+resize_collection part_fedata generic_body_as partData[10] 10 4
+update_collection part_fedata generic_body_as partData[10] 10 0 Value body_rear_slider_1
+update_collection part_fedata generic_body_as partData[10] 10 1 Value body_rear_slider_2
+update_collection part_fedata generic_body_as partData[10] 10 2 Value body_rear_slider_3
+update_collection part_fedata generic_body_as partData[10] 10 3 Value body_rear_slider_4
+resize_collection part_fedata generic_body_as partData[10] 11 3
+update_collection part_fedata generic_body_as partData[10] 11 0 Value body_skirt_slider_1
+update_collection part_fedata generic_body_as partData[10] 11 1 Value body_skirt_slider_2
+update_collection part_fedata generic_body_as partData[10] 11 2 Value body_skirt_slider_3
+
+update_field part_fedata generic_body_as partData[11] HAL_ID 0xB08ACDD7
+update_field part_fedata generic_body_as partData[11] Price 9000
+update_field part_fedata generic_body_as partData[11] 7 0x56db0b22
+resize_collection part_fedata generic_body_as partData[11] 9 4
+update_collection part_fedata generic_body_as partData[11] 9 0 Value body_front_slider_1
+update_collection part_fedata generic_body_as partData[11] 9 1 Value body_front_slider_2
+update_collection part_fedata generic_body_as partData[11] 9 2 Value body_front_slider_3
+update_collection part_fedata generic_body_as partData[11] 9 3 Value body_front_slider_4
+resize_collection part_fedata generic_body_as partData[11] 10 4
+update_collection part_fedata generic_body_as partData[11] 10 0 Value body_rear_slider_1
+update_collection part_fedata generic_body_as partData[11] 10 1 Value body_rear_slider_2
+update_collection part_fedata generic_body_as partData[11] 10 2 Value body_rear_slider_3
+update_collection part_fedata generic_body_as partData[11] 10 3 Value body_rear_slider_4
+resize_collection part_fedata generic_body_as partData[11] 11 3
+update_collection part_fedata generic_body_as partData[11] 11 0 Value body_skirt_slider_1
+update_collection part_fedata generic_body_as partData[11] 11 1 Value body_skirt_slider_2
+update_collection part_fedata generic_body_as partData[11] 11 2 Value body_skirt_slider_3
+
+update_field part_fedata generic_body_as partData[12] HAL_ID 0xB08ACDD8
+update_field part_fedata generic_body_as partData[12] Price 9000
+update_field part_fedata generic_body_as partData[12] 7 0x56db0b22
+resize_collection part_fedata generic_body_as partData[12] 9 4
+update_collection part_fedata generic_body_as partData[12] 9 0 Value body_front_slider_1
+update_collection part_fedata generic_body_as partData[12] 9 1 Value body_front_slider_2
+update_collection part_fedata generic_body_as partData[12] 9 2 Value body_front_slider_3
+update_collection part_fedata generic_body_as partData[12] 9 3 Value body_front_slider_4
+resize_collection part_fedata generic_body_as partData[12] 10 4
+update_collection part_fedata generic_body_as partData[12] 10 0 Value body_rear_slider_1
+update_collection part_fedata generic_body_as partData[12] 10 1 Value body_rear_slider_2
+update_collection part_fedata generic_body_as partData[12] 10 2 Value body_rear_slider_3
+update_collection part_fedata generic_body_as partData[12] 10 3 Value body_rear_slider_4
+resize_collection part_fedata generic_body_as partData[12] 11 3
+update_collection part_fedata generic_body_as partData[12] 11 0 Value body_skirt_slider_1
+update_collection part_fedata generic_body_as partData[12] 11 1 Value body_skirt_slider_2
+update_collection part_fedata generic_body_as partData[12] 11 2 Value body_skirt_slider_3
+
+update_field part_fedata generic_body_as partData[13] HAL_ID 0xB08ACDD9
+update_field part_fedata generic_body_as partData[13] Price 9000
+update_field part_fedata generic_body_as partData[13] 7 0x56db0b22
+resize_collection part_fedata generic_body_as partData[13] 9 4
+update_collection part_fedata generic_body_as partData[13] 9 0 Value body_front_slider_1
+update_collection part_fedata generic_body_as partData[13] 9 1 Value body_front_slider_2
+update_collection part_fedata generic_body_as partData[13] 9 2 Value body_front_slider_3
+update_collection part_fedata generic_body_as partData[13] 9 3 Value body_front_slider_4
+resize_collection part_fedata generic_body_as partData[13] 10 4
+update_collection part_fedata generic_body_as partData[13] 10 0 Value body_rear_slider_1
+update_collection part_fedata generic_body_as partData[13] 10 1 Value body_rear_slider_2
+update_collection part_fedata generic_body_as partData[13] 10 2 Value body_rear_slider_3
+update_collection part_fedata generic_body_as partData[13] 10 3 Value body_rear_slider_4
+resize_collection part_fedata generic_body_as partData[13] 11 3
+update_collection part_fedata generic_body_as partData[13] 11 0 Value body_skirt_slider_1
+update_collection part_fedata generic_body_as partData[13] 11 1 Value body_skirt_slider_2
+update_collection part_fedata generic_body_as partData[13] 11 2 Value body_skirt_slider_3
+
+update_field part_fedata generic_body_as partData[14] HAL_ID 0xB08ACDDa
+update_field part_fedata generic_body_as partData[14] Price 9000
+update_field part_fedata generic_body_as partData[14] 7 0x56db0b22
+resize_collection part_fedata generic_body_as partData[14] 9 4
+update_collection part_fedata generic_body_as partData[14] 9 0 Value body_front_slider_1
+update_collection part_fedata generic_body_as partData[14] 9 1 Value body_front_slider_2
+update_collection part_fedata generic_body_as partData[14] 9 2 Value body_front_slider_3
+update_collection part_fedata generic_body_as partData[14] 9 3 Value body_front_slider_4
+resize_collection part_fedata generic_body_as partData[14] 10 4
+update_collection part_fedata generic_body_as partData[14] 10 0 Value body_rear_slider_1
+update_collection part_fedata generic_body_as partData[14] 10 1 Value body_rear_slider_2
+update_collection part_fedata generic_body_as partData[14] 10 2 Value body_rear_slider_3
+update_collection part_fedata generic_body_as partData[14] 10 3 Value body_rear_slider_4
+resize_collection part_fedata generic_body_as partData[14] 11 3
+update_collection part_fedata generic_body_as partData[14] 11 0 Value body_skirt_slider_1
+update_collection part_fedata generic_body_as partData[14] 11 1 Value body_skirt_slider_2
+update_collection part_fedata generic_body_as partData[14] 11 2 Value body_skirt_slider_3
+
+update_field part_fedata generic_body_as partData[15] HAL_ID 0xB08ACDDb
+update_field part_fedata generic_body_as partData[15] Price 9000
+update_field part_fedata generic_body_as partData[15] 7 0x56db0b22
+resize_collection part_fedata generic_body_as partData[15] 9 4
+update_collection part_fedata generic_body_as partData[15] 9 0 Value body_front_slider_1
+update_collection part_fedata generic_body_as partData[15] 9 1 Value body_front_slider_2
+update_collection part_fedata generic_body_as partData[15] 9 2 Value body_front_slider_3
+update_collection part_fedata generic_body_as partData[15] 9 3 Value body_front_slider_4
+resize_collection part_fedata generic_body_as partData[15] 10 4
+update_collection part_fedata generic_body_as partData[15] 10 0 Value body_rear_slider_1
+update_collection part_fedata generic_body_as partData[15] 10 1 Value body_rear_slider_2
+update_collection part_fedata generic_body_as partData[15] 10 2 Value body_rear_slider_3
+update_collection part_fedata generic_body_as partData[15] 10 3 Value body_rear_slider_4
+resize_collection part_fedata generic_body_as partData[15] 11 3
+update_collection part_fedata generic_body_as partData[15] 11 0 Value body_skirt_slider_1
+update_collection part_fedata generic_body_as partData[15] 11 1 Value body_skirt_slider_2
+update_collection part_fedata generic_body_as partData[15] 11 2 Value body_skirt_slider_3
+
+// Allow more hoods in FE
+delete_node part_fedata generic_hood_as
+copy_node part_fedata generic_exhaust generic_hood_as
+
+update_field part_fedata generic_hood_as partData[0] HAL_ID 0x60bb3ff9
+update_field part_fedata generic_hood_as partData[0] CF_HAL_ID 0x7c8b2b22
+update_field part_fedata generic_hood_as partData[0] 7 0x7f0ba498
+resize_collection part_fedata generic_hood_as partData[0] 9 4
+update_collection part_fedata generic_hood_as partData[0] 9 0 Value hoods_slider_1
+update_collection part_fedata generic_hood_as partData[0] 9 1 Value hoods_slider_2
+update_collection part_fedata generic_hood_as partData[0] 9 2 Value hoods_slider_3
+update_collection part_fedata generic_hood_as partData[0] 9 3 Value hoods_slider_4
+
+update_field part_fedata generic_hood_as partData[1] HAL_ID 0x60bb3ff9
+update_field part_fedata generic_hood_as partData[1] CF_HAL_ID 0x7c8b2b22
+update_field part_fedata generic_hood_as partData[1] Price 3100
+update_field part_fedata generic_hood_as partData[1] 7 0x3657d75c
+resize_collection part_fedata generic_hood_as partData[1] 9 4
+update_collection part_fedata generic_hood_as partData[1] 9 0 Value hoods_slider_1
+update_collection part_fedata generic_hood_as partData[1] 9 1 Value hoods_slider_2
+update_collection part_fedata generic_hood_as partData[1] 9 2 Value hoods_slider_3
+update_collection part_fedata generic_hood_as partData[1] 9 3 Value hoods_slider_4
+
+update_field part_fedata generic_hood_as partData[2] HAL_ID 0x60bb3ffa
+update_field part_fedata generic_hood_as partData[2] CF_HAL_ID 0x7c8b2f63
+update_field part_fedata generic_hood_as partData[2] Price 2500
+update_field part_fedata generic_hood_as partData[2] 7 0x3657d75c
+resize_collection part_fedata generic_hood_as partData[2] 9 4
+update_collection part_fedata generic_hood_as partData[2] 9 0 Value hoods_slider_1
+update_collection part_fedata generic_hood_as partData[2] 9 1 Value hoods_slider_2
+update_collection part_fedata generic_hood_as partData[2] 9 2 Value hoods_slider_3
+update_collection part_fedata generic_hood_as partData[2] 9 3 Value hoods_slider_4
+
+update_field part_fedata generic_hood_as partData[3] HAL_ID 0x60bb3ffb
+update_field part_fedata generic_hood_as partData[3] CF_HAL_ID 0x7c8b33a4
+update_field part_fedata generic_hood_as partData[3] Price 4200
+update_field part_fedata generic_hood_as partData[3] 7 0x3657d75c
+resize_collection part_fedata generic_hood_as partData[3] 9 4
+update_collection part_fedata generic_hood_as partData[3] 9 0 Value hoods_slider_1
+update_collection part_fedata generic_hood_as partData[3] 9 1 Value hoods_slider_2
+update_collection part_fedata generic_hood_as partData[3] 9 2 Value hoods_slider_3
+update_collection part_fedata generic_hood_as partData[3] 9 3 Value hoods_slider_4
+
+update_field part_fedata generic_hood_as partData[4] HAL_ID 0x60bb3ffc
+update_field part_fedata generic_hood_as partData[4] CF_HAL_ID 0x7c8b37e5
+update_field part_fedata generic_hood_as partData[4] Price 3600
+update_field part_fedata generic_hood_as partData[4] 7 0x3657d75c
+resize_collection part_fedata generic_hood_as partData[4] 9 4
+update_collection part_fedata generic_hood_as partData[4] 9 0 Value hoods_slider_1
+update_collection part_fedata generic_hood_as partData[4] 9 1 Value hoods_slider_2
+update_collection part_fedata generic_hood_as partData[4] 9 2 Value hoods_slider_3
+update_collection part_fedata generic_hood_as partData[4] 9 3 Value hoods_slider_4
+
+update_field part_fedata generic_hood_as partData[5] HAL_ID 0x60BB3FFD
+update_field part_fedata generic_hood_as partData[5] CF_HAL_ID 0x7C8B3C26
+update_field part_fedata generic_hood_as partData[5] Price 3600
+update_field part_fedata generic_hood_as partData[5] 7 0x3657d75c
+resize_collection part_fedata generic_hood_as partData[5] 9 4
+update_collection part_fedata generic_hood_as partData[5] 9 0 Value hoods_slider_1
+update_collection part_fedata generic_hood_as partData[5] 9 1 Value hoods_slider_2
+update_collection part_fedata generic_hood_as partData[5] 9 2 Value hoods_slider_3
+update_collection part_fedata generic_hood_as partData[5] 9 3 Value hoods_slider_4
+
+update_field part_fedata generic_hood_as partData[6] HAL_ID 0x60BB3FFE
+update_field part_fedata generic_hood_as partData[6] CF_HAL_ID 0x7C8B4067
+update_field part_fedata generic_hood_as partData[6] Price 3600
+update_field part_fedata generic_hood_as partData[6] 7 0x3657d75c
+resize_collection part_fedata generic_hood_as partData[6] 9 4
+update_collection part_fedata generic_hood_as partData[6] 9 0 Value hoods_slider_1
+update_collection part_fedata generic_hood_as partData[6] 9 1 Value hoods_slider_2
+update_collection part_fedata generic_hood_as partData[6] 9 2 Value hoods_slider_3
+update_collection part_fedata generic_hood_as partData[6] 9 3 Value hoods_slider_4
+
+update_field part_fedata generic_hood_as partData[7] HAL_ID 0x60BB3FFF
+update_field part_fedata generic_hood_as partData[7] CF_HAL_ID 0x7C8B44A8
+update_field part_fedata generic_hood_as partData[7] Price 3600
+update_field part_fedata generic_hood_as partData[7] 7 0x3657d75c
+resize_collection part_fedata generic_hood_as partData[7] 9 4
+update_collection part_fedata generic_hood_as partData[7] 9 0 Value hoods_slider_1
+update_collection part_fedata generic_hood_as partData[7] 9 1 Value hoods_slider_2
+update_collection part_fedata generic_hood_as partData[7] 9 2 Value hoods_slider_3
+update_collection part_fedata generic_hood_as partData[7] 9 3 Value hoods_slider_4
+
+update_field part_fedata generic_hood_as partData[8] HAL_ID 0x60BB4000
+update_field part_fedata generic_hood_as partData[8] CF_HAL_ID 0x7C8B48E9
+update_field part_fedata generic_hood_as partData[8] Price 3600
+update_field part_fedata generic_hood_as partData[8] 7 0x3657d75c
+resize_collection part_fedata generic_hood_as partData[8] 9 4
+update_collection part_fedata generic_hood_as partData[8] 9 0 Value hoods_slider_1
+update_collection part_fedata generic_hood_as partData[8] 9 1 Value hoods_slider_2
+update_collection part_fedata generic_hood_as partData[8] 9 2 Value hoods_slider_3
+update_collection part_fedata generic_hood_as partData[8] 9 3 Value hoods_slider_4
+
+update_field part_fedata generic_hood_as partData[9] HAL_ID 0x60BB4001
+update_field part_fedata generic_hood_as partData[9] CF_HAL_ID 0x7C8B4D2A
+update_field part_fedata generic_hood_as partData[9] Price 3600
+update_field part_fedata generic_hood_as partData[9] 7 0x3657d75c
+resize_collection part_fedata generic_hood_as partData[9] 9 4
+update_collection part_fedata generic_hood_as partData[9] 9 0 Value hoods_slider_1
+update_collection part_fedata generic_hood_as partData[9] 9 1 Value hoods_slider_2
+update_collection part_fedata generic_hood_as partData[9] 9 2 Value hoods_slider_3
+update_collection part_fedata generic_hood_as partData[9] 9 3 Value hoods_slider_4
+
+update_field part_fedata generic_hood_as partData[10] HAL_ID 0x78233F49
+update_field part_fedata generic_hood_as partData[10] CF_HAL_ID 0x0DF03E72
+update_field part_fedata generic_hood_as partData[10] Price 3600
+update_field part_fedata generic_hood_as partData[10] 7 0x3657d75c
+resize_collection part_fedata generic_hood_as partData[10] 9 4
+update_collection part_fedata generic_hood_as partData[10] 9 0 Value hoods_slider_1
+update_collection part_fedata generic_hood_as partData[10] 9 1 Value hoods_slider_2
+update_collection part_fedata generic_hood_as partData[10] 9 2 Value hoods_slider_3
+update_collection part_fedata generic_hood_as partData[10] 9 3 Value hoods_slider_4
+
+update_field part_fedata generic_hood_as partData[11] HAL_ID 0x78233F4A
+update_field part_fedata generic_hood_as partData[11] CF_HAL_ID 0x0DF042B3
+update_field part_fedata generic_hood_as partData[11] Price 3600
+update_field part_fedata generic_hood_as partData[11] 7 0x3657d75c
+resize_collection part_fedata generic_hood_as partData[11] 9 4
+update_collection part_fedata generic_hood_as partData[11] 9 0 Value hoods_slider_1
+update_collection part_fedata generic_hood_as partData[11] 9 1 Value hoods_slider_2
+update_collection part_fedata generic_hood_as partData[11] 9 2 Value hoods_slider_3
+update_collection part_fedata generic_hood_as partData[11] 9 3 Value hoods_slider_4
+
+update_field part_fedata generic_hood_as partData[12] HAL_ID 0x78233F4B
+update_field part_fedata generic_hood_as partData[12] CF_HAL_ID 0x0DF046F4
+update_field part_fedata generic_hood_as partData[12] Price 3600
+update_field part_fedata generic_hood_as partData[12] 7 0x3657d75c
+resize_collection part_fedata generic_hood_as partData[12] 9 4
+update_collection part_fedata generic_hood_as partData[12] 9 0 Value hoods_slider_1
+update_collection part_fedata generic_hood_as partData[12] 9 1 Value hoods_slider_2
+update_collection part_fedata generic_hood_as partData[12] 9 2 Value hoods_slider_3
+update_collection part_fedata generic_hood_as partData[12] 9 3 Value hoods_slider_4
+
+update_field part_fedata generic_hood_as partData[13] HAL_ID 0x78233F4C
+update_field part_fedata generic_hood_as partData[13] CF_HAL_ID 0x0DF04B35
+update_field part_fedata generic_hood_as partData[13] Price 3600
+update_field part_fedata generic_hood_as partData[13] 7 0x3657d75c
+resize_collection part_fedata generic_hood_as partData[13] 9 4
+update_collection part_fedata generic_hood_as partData[13] 9 0 Value hoods_slider_1
+update_collection part_fedata generic_hood_as partData[13] 9 1 Value hoods_slider_2
+update_collection part_fedata generic_hood_as partData[13] 9 2 Value hoods_slider_3
+update_collection part_fedata generic_hood_as partData[13] 9 3 Value hoods_slider_4
+
+update_field part_fedata generic_hood_as partData[14] HAL_ID 0x78233F4D
+update_field part_fedata generic_hood_as partData[14] CF_HAL_ID 0x0DF04F76
+update_field part_fedata generic_hood_as partData[14] Price 3600
+update_field part_fedata generic_hood_as partData[14] 7 0x3657d75c
+resize_collection part_fedata generic_hood_as partData[14] 9 4
+update_collection part_fedata generic_hood_as partData[14] 9 0 Value hoods_slider_1
+update_collection part_fedata generic_hood_as partData[14] 9 1 Value hoods_slider_2
+update_collection part_fedata generic_hood_as partData[14] 9 2 Value hoods_slider_3
+update_collection part_fedata generic_hood_as partData[14] 9 3 Value hoods_slider_4
+
+update_field part_fedata generic_hood_as partData[15] HAL_ID 0x78233F4E
+update_field part_fedata generic_hood_as partData[15] CF_HAL_ID 0x0DF053B7
+update_field part_fedata generic_hood_as partData[15] Price 3600
+update_field part_fedata generic_hood_as partData[15] 7 0x3657d75c
+resize_collection part_fedata generic_hood_as partData[15] 9 4
+update_collection part_fedata generic_hood_as partData[15] 9 0 Value hoods_slider_1
+update_collection part_fedata generic_hood_as partData[15] 9 1 Value hoods_slider_2
+update_collection part_fedata generic_hood_as partData[15] 9 2 Value hoods_slider_3
+update_collection part_fedata generic_hood_as partData[15] 9 3 Value hoods_slider_4
