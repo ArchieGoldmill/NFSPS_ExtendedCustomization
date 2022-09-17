@@ -1,8 +1,8 @@
 Need for Speed: Pro Street - Extended Customization
 
 How to install:
-- Drop everything from "Install" folder to your game directory.
-- Optional: apply 4GB Patch https://ntcore.com/?page_id=371
+- Open Binary in User mode, pick "Install Binary.end".
+- Open NFS:PS folder via VltEd, import "Install Vlt.nfsms".
 
 Features:
 - Force LOD A (global and per car).
@@ -10,6 +10,10 @@ Features:
 - Bodykit tire offsets are moved from Vlt to Binary (FRONT_TIRE_OFFSET, REAR_TIRE_OFFSET attributes).
 - Front steer angle.
 - Infinite tuning sliders.
+- Extended Spoilers by TiSonic (orignal mod - https://nfsmods.xyz/mod/3575).
+- Extended hoods and bodykits.
+- Drag and Evo spoilers are now available for any race mode.
+- Hidden hoods are now available in menu.
 
 You are NOT allowed to distribute or reupload this mod.
 

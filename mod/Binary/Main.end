@@ -6,8 +6,8 @@ stop_errors false
 unlock_memory all
 
 // Files
-move_file override relative absolute Files\ExtendedCustomization.asi scripts\ExtendedCustomization.asi
-move_file override relative absolute Files\ExtendedCustomization.ini scripts\ExtendedCustomization.ini
+move_file override relative absolute Files\NFSPSExtendedCustomization.asi scripts\NFSPSExtendedCustomization.asi
+move_file override relative absolute Files\NFSPSExtendedCustomization.ini scripts\NFSPSExtendedCustomization.ini
 move_file override relative absolute Files\dinput8.dll dinput8.dll
 
 if directory_exists absolute scripts\ExtendedCustomizationCars

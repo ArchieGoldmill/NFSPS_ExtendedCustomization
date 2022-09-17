@@ -76,7 +76,7 @@
     <TargetExt>.asi</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>..\mod\Install\scripts\</OutDir>
+    <OutDir>..\mod\Binary\Files</OutDir>
     <TargetName>NFSPSExtendedCustomization</TargetName>
     <TargetExt>.asi</TargetExt>
   </PropertyGroup>
