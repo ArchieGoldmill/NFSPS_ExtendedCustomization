@@ -77,6 +77,19 @@ copy_node part_fedata generic_spoiler_drag generic_spoiler_drag5
 copy_node part_art generic_spoiler_drag generic_spoiler_drag5
 	update_field part_art generic_spoiler_drag5 models SPOILER_DRAG5
 
+// Bind new kits to kit type
+resize_field car_kits generic_car_kits autosculpt_kit 10
+update_field car_kits generic_car_kits autosculpt_kit[5] Class car_kit
+update_field car_kits generic_car_kits autosculpt_kit[5] Collection generic_autosculpt
+update_field car_kits generic_car_kits autosculpt_kit[6] Class car_kit
+update_field car_kits generic_car_kits autosculpt_kit[6] Collection generic_autosculpt
+update_field car_kits generic_car_kits autosculpt_kit[7] Class car_kit
+update_field car_kits generic_car_kits autosculpt_kit[7] Collection generic_autosculpt
+update_field car_kits generic_car_kits autosculpt_kit[8] Class car_kit
+update_field car_kits generic_car_kits autosculpt_kit[8] Collection generic_autosculpt
+update_field car_kits generic_car_kits autosculpt_kit[9] Class car_kit
+update_field car_kits generic_car_kits autosculpt_kit[9] Collection generic_autosculpt
+
 // Allow more bodykits in FE
 delete_node part_fedata generic_body_as
 copy_node part_fedata generic_exhaust generic_body_as
