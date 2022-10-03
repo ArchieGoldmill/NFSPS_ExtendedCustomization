@@ -16,6 +16,7 @@ namespace Config
 		float FrontSteerAngle;
 		bool ExpandMemoryPools;
 		bool InfiniteTuningSliders;
+		bool InfiniteAutosculptSliders;
 	};
 
 	class _Car : public _Common

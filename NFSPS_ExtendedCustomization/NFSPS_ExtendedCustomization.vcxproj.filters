@@ -20,6 +20,9 @@
     <Filter Include="Features\Stance">
       <UniqueIdentifier>{4152e853-f428-49fb-a039-98cac58379cc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Features\InfiniteSliders">
+      <UniqueIdentifier>{a012fc6e-2b7f-4b29-8da8-9508cdaba126}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -33,6 +36,9 @@
     </ClCompile>
     <ClCompile Include="Stance.cpp">
       <Filter>Features\Stance</Filter>
+    </ClCompile>
+    <ClCompile Include="InfiniteSliders.cpp">
+      <Filter>Features\InfiniteSliders</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -50,6 +56,9 @@
     </ClInclude>
     <ClInclude Include="Stance.h">
       <Filter>Features\Stance</Filter>
+    </ClInclude>
+    <ClInclude Include="InfiniteSliders.h">
+      <Filter>Features\InfiniteSliders</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -157,6 +157,7 @@
     <ClCompile Include="Config.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="ForceLodA.cpp" />
+    <ClCompile Include="InfiniteSliders.cpp" />
     <ClCompile Include="Stance.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +165,7 @@
     <ClInclude Include="Feature.h" />
     <ClInclude Include="ForceLodA.h" />
     <ClInclude Include="GameApi.h" />
+    <ClInclude Include="InfiniteSliders.h" />
     <ClInclude Include="Stance.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

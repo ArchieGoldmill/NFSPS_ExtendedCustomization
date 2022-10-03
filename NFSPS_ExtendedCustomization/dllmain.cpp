@@ -3,6 +3,7 @@
 #include "Feature.h"
 #include "ForceLodA.h"
 #include "Stance.h"
+#include "InfiniteSliders.h"
 
 void Init()
 {
@@ -19,16 +20,9 @@ void Init()
 		injector::WriteMemory<DWORD>(0x00A60DE4, 0x13880 * 2, true); // CarLoaderPoolSizes
 	}
 
-	if (Config::Global.InfiniteTuningSliders)
-	{
-		injector::MakeNOP(0x005C192C, 8, true);
-		injector::MakeNOP(0x005C18DC, 2, true);
-		injector::MakeNOP(0x005C185A, 2, true);
-		injector::MakeJMP(0x005C18E6, 0x005C19AC, true);
-	}
-
 	InitForceLodA();
 	InitStance();
+	InitInfiniteSliders();
 }
 
 BOOL APIENTRY DllMain(HMODULE /*hModule*/, DWORD reason, LPVOID /*lpReserved*/)

@@ -62,6 +62,7 @@ namespace Config
 		Global.FrontSteerAngle = iniReader.ReadFloat("GENERAL", "FrontSteerAngle", 340);
 		Global.ExpandMemoryPools = iniReader.ReadInteger("GENERAL", "ExpandMemoryPools", 0) == 1;
 		Global.InfiniteTuningSliders = iniReader.ReadInteger("GENERAL", "InfiniteTuningSliders", 0) == 1;
+		Global.InfiniteAutosculptSliders = iniReader.ReadInteger("GENERAL", "InfiniteAutosculptSliders", 0) == 1;
 
 		InitCars();
 	}
