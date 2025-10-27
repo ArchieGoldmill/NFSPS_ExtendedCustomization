@@ -60,5 +60,8 @@
     <ClInclude Include="InfiniteSliders.h">
       <Filter>Features\InfiniteSliders</Filter>
     </ClInclude>
+    <ClInclude Include="ReplacementTextures.h">
+      <Filter>Features</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

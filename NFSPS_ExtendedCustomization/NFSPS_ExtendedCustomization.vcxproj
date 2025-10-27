@@ -76,7 +76,7 @@
     <TargetExt>.asi</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>..\mod\Binary\Files</OutDir>
+    <OutDir>..\mod\Binary\Files\</OutDir>
     <TargetName>NFSPSExtendedCustomization</TargetName>
     <TargetExt>.asi</TargetExt>
   </PropertyGroup>
@@ -166,6 +166,7 @@
     <ClInclude Include="ForceLodA.h" />
     <ClInclude Include="GameApi.h" />
     <ClInclude Include="InfiniteSliders.h" />
+    <ClInclude Include="ReplacementTextures.h" />
     <ClInclude Include="Stance.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

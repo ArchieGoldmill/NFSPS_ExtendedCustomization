@@ -4,6 +4,7 @@
 #include "ForceLodA.h"
 #include "Stance.h"
 #include "InfiniteSliders.h"
+#include "ReplacementTextures.h"
 
 void Init()
 {
@@ -23,6 +24,7 @@ void Init()
 	InitForceLodA();
 	InitStance();
 	InitInfiniteSliders();
+	InitReplacementTextures();
 }
 
 BOOL APIENTRY DllMain(HMODULE /*hModule*/, DWORD reason, LPVOID /*lpReserved*/)
@@ -30,12 +32,13 @@ BOOL APIENTRY DllMain(HMODULE /*hModule*/, DWORD reason, LPVOID /*lpReserved*/)
 	if (reason == DLL_PROCESS_ATTACH)
 	{
 		uintptr_t base = (uintptr_t)GetModuleHandleA(NULL);
+		IMAGE_DOS_HEADER* dos = (IMAGE_DOS_HEADER*)(base);
+		IMAGE_NT_HEADERS* nt = (IMAGE_NT_HEADERS*)(base + dos->e_lfanew);
 
-		if (strstr((const char*)(base + (0xA49742 - base)), "ProStreet08Release.exe"))
+		if (nt->OptionalHeader.AddressOfEntryPoint + 0x400000 == 0x00828c25)
 		{
 			Init();
 		}
-
 		else
 		{
 			MessageBoxA(NULL, "This .exe is not supported.\nPlease use a NOCD v1.1 NFS.exe.", "NFSPS Extended Customization", MB_ICONERROR);

@@ -1,15 +1,15 @@
 #include "Stance.h"
 #include "Feature.h"
 
-float __stdcall GetTrackWidth(int** carRenderInfo, int wheel, int original)
+float __stdcall GetTrackWidth(UINT** carRenderInfo, int wheel, int original)
 {
 	float result = original / 1000.0f;
 	if (carRenderInfo)
 	{
-		int* rideInfo = carRenderInfo[0xFC];
+		UINT* rideInfo = carRenderInfo[0xFC];
 		if (rideInfo)
 		{
-			int* part = rideInfo + 0x36;
+			UINT* part = rideInfo + 0x36;
 
 			float* ptr = (float*)Game::DBCarPart_GetAppliedAttributeIParam(part, wheel < 2 ? FRONT_TIRE_OFFSET : REAR_TIRE_OFFSET, 0);
 			if (ptr)
