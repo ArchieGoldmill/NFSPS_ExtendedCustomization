@@ -16,6 +16,9 @@ else
 create_folder absolute scripts\ExtendedCustomizationCars
 end
 
+// TPK blocks
+import override GLOBAL\GLOBALB.LZC TPKBlocks TPKBlocks\EXTENDED_CUSTOMIZATION.bin
+
 // Localization
 append Localization\English.end
 append Localization\Danish.end

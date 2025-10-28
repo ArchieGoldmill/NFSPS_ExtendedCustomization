@@ -20,7 +20,7 @@ void __fastcall UpdateReplacementTextures(UINT** carRenderInfo)
 		{
 			char tireStyle[128];
 
-			sprintf(tireStyle, "TIRE_STYLE%02d", tire);
+			sprintf(tireStyle, "TIRE_STYLE_%02d", tire);
 			auto newHash = Game::StringHash(tireStyle);
 			if (Game::GetTextureInfo(newHash, 0, 0))
 			{
@@ -34,7 +34,7 @@ void __fastcall UpdateReplacementTextures(UINT** carRenderInfo)
 				tireEntry->New = newHash;
 				tireEntry->Texture = 0;
 
-				sprintf(tireStyle, "TIRE_STYLE%02d_N", tire);
+				sprintf(tireStyle, "TIRE_STYLE_%02d_N", tire);
 				newHash = Game::StringHash(tireStyle);
 				if (!Game::GetTextureInfo(newHash, 0, 0))
 				{
