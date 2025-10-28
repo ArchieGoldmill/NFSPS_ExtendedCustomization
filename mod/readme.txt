@@ -14,6 +14,7 @@ Features:
 - Extended hoods and bodykits.
 - Drag and Evo spoilers are now available for any race mode.
 - Hidden hoods are now available in menu.
+- New tire textures.
 
 You are NOT allowed to distribute or reupload this mod.
 
