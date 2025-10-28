@@ -5,6 +5,8 @@ const Hash FRONT_TIRE_OFFSET = 0xFDE70341;
 const Hash REAR_TIRE_OFFSET = 0x2FC42D62;
 const Hash TIRE_STYLE01 = 0xE4CEA024;
 const Hash TIRE_STYLE01_N = 0x52F745B1;
+const Hash TIRE_STYLE77 = 0xE4CEA111;
+const Hash PLAIN_NORMAL = 0x1B00A71B;
 
 namespace Game
 {
@@ -15,5 +17,6 @@ namespace Game
 
 	static auto DBCarPart_GetAppliedAttributeIParam = (void* (__thiscall*)(void*, Hash, int))0x00754CD0;
 	static auto eModel_AttachReplacmentTable = (void* (__thiscall*)(void*, void*))0x00837200;
+	static auto CarRenderInfo_UpdateReplacementTextures = (void* (__thiscall*)(void*))0x00787A90;
 	static auto GetTextureInfo = (void* (__cdecl*)(Hash, int, int))0x00459C10;
 }
